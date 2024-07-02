@@ -11,6 +11,10 @@ app.use(express.json())
 app.use("/profile", ProfileRouter)
 
 
+app.get("/", (req,res)=> {
+    res.send("server is running")
+})
+
 const port = process.env.PORT
 app.listen(port, async()=> {
     try {
